@@ -1,0 +1,27 @@
+@use "sass:meta";
+
+:root {
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --bg-color: #{$white-color};
+  --footer-bg-color: #{$black-color};
+  --color-text: #{$dark-blue-text};
+  --color-text-2: #{$white-color};
+}
+
+[data-theme="dark"] {
+  --primary-color: #{$black-color};
+  --secondary-color: #{$black-color};
+  --bg-color: #{$black-color};
+  --color-text: #{$white-color};
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  background: var(--bg-color);
+}
