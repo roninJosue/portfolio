@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useContext } from "react";
-import { Button, Container, Row } from "react-bootstrap";
+import React, { useState, useEffect, useContext } from 'react';
+import { Container, Row } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
-
 
 const Head = () => {
   const [theme, setTheme] = useState(false);
@@ -21,9 +20,9 @@ const Head = () => {
   const handleChange = () => {
     setTheme(!theme);
     if (theme) {
-      document.documentElement.setAttribute("data-theme", "light");
+      document.documentElement.setAttribute('data-theme', 'light');
     } else {
-      document.documentElement.setAttribute("data-theme", "dark");
+      document.documentElement.setAttribute('data-theme', 'dark');
     }
   };
 
@@ -31,7 +30,7 @@ const Head = () => {
     <header id="head">
       <Container>
         <Row className="justify-content-between align-items-center">
-          <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
+          <Fade right={isDesktop} bottom={isMobile} duration={1000} delay={100} distance="30px">
             <h1>This is the header</h1>
             <span className="icon-theme" onClick={handleChange}>{theme ?
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"

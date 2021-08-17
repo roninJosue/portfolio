@@ -1,8 +1,11 @@
 #head{
   background: var(--bg-color);
   color: var(--color-text);
-  margin-top: 1em;
-  padding: 0rem 1.6rem;
+  top: 0;
+  padding: 1rem 1.6rem;
+  position: fixed;
+  z-index: 99999;
+  width: 100%;
 
   .icon-theme {
     cursor: pointer;

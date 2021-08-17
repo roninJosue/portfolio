@@ -5,10 +5,12 @@ import Projects from './Projects/Projects';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
 import Head from './Head/Head';
+import { listRepos } from "../api/repos";
 
 import { PortfolioProvider } from '../context/context';
 
 import { heroData, aboutData, projectsData, contactData, footerData } from '../mock/data';
+
 
 function App() {
   const [hero, setHero] = useState({});
@@ -16,6 +18,8 @@ function App() {
   const [projects, setProjects] = useState([]);
   const [contact, setContact] = useState({});
   const [footer, setFooter] = useState({});
+  const [repos, setRepos] = useState([]);
+
 
   useEffect(() => {
     setHero({ ...heroData });
@@ -25,9 +29,14 @@ function App() {
     setFooter({ ...footerData });
   }, []);
 
+  useEffect(async ()=>{
+    const reps = await listRepos();
+    setRepos(reps);
+  }, [])
+
 
   return (
-    <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
+    <PortfolioProvider value={{ hero, about, projects, contact, footer, repos }}>
       <Head />
       <main>
         <Hero />
