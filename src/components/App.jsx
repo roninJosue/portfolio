@@ -31,7 +31,8 @@ function App() {
 
   useEffect(async ()=>{
     const reps = await listRepos();
-    setRepos(reps);
+    const filterRepos = reps.filter((rep) => !rep.fork && rep.homepage && rep.name !== 'codersrank-practice')
+    setRepos(filterRepos);
   }, [])
 
 

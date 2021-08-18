@@ -3,8 +3,7 @@ const listRepos = async (user = 'roninJosue') => {
     method: 'GET',
     headers: {
       Accept: 'application/json',
-      'Content-type': 'application/json',
-      'Authorization': 'token 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'
+      'Content-type': 'application/json'
     }
   });
 

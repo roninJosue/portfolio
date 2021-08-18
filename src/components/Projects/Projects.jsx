@@ -28,7 +28,7 @@ const Projects = () => {
         <div className="project-wrapper">
           <Title title="Projects" />
           {repos.map((project) => {
-            const { name, description, info2, homepage, html_url: htmlUrl, img, id } = project;
+            const { name, description, info2, homepage, html_url: htmlUrl, id } = project;
 
             return (
               <Row key={id}>
@@ -45,7 +45,7 @@ const Projects = () => {
                       <div>
                         <p>
                           {description ||
-                            'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
+                          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
                         </p>
                         <p className="mb-4">{info2 || ''}</p>
                       </div>
@@ -100,7 +100,7 @@ const Projects = () => {
                           }}
                         >
                           <div data-tilt className="thumbnail rounded">
-                            <ProjectImg alt={name} filename={img} />
+                            <ProjectImg alt={name} filename={`${name}.jpg`} />
                           </div>
                         </Tilt>
                       </a>
