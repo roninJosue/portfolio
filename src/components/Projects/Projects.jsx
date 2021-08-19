@@ -27,7 +27,7 @@ const Projects = () => {
       <Container>
         <div className="project-wrapper">
           <Title title="Projects" />
-          {repos.map((project) => {
+          {repos.length > 0 && repos.map((project) => {
             const { name, description, info2, homepage, html_url: htmlUrl, id } = project;
 
             return (

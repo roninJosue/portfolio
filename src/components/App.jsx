@@ -5,17 +5,16 @@ import Projects from './Projects/Projects';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
 import Head from './Head/Head';
-import { listRepos } from "../api/repos";
+import { listRepos } from '../api/repos';
 
 import { PortfolioProvider } from '../context/context';
 
-import { heroData, aboutData, projectsData, contactData, footerData } from '../mock/data';
+import { heroData, aboutData, contactData, footerData } from '../mock/data';
 
 
 function App() {
   const [hero, setHero] = useState({});
   const [about, setAbout] = useState({});
-  const [projects, setProjects] = useState([]);
   const [contact, setContact] = useState({});
   const [footer, setFooter] = useState({});
   const [repos, setRepos] = useState([]);
@@ -24,20 +23,21 @@ function App() {
   useEffect(() => {
     setHero({ ...heroData });
     setAbout({ ...aboutData });
-    setProjects([...projectsData]);
     setContact({ ...contactData });
     setFooter({ ...footerData });
   }, []);
 
-  useEffect(async ()=>{
-    const reps = await listRepos();
-    const filterRepos = reps.filter((rep) => !rep.fork && rep.homepage && rep.name !== 'codersrank-practice')
-    setRepos(filterRepos);
-  }, [])
+  useEffect(() => {
+    listRepos().then((repo) => {
+      const filterRepos = repo.filter((rep) => !rep.fork && rep.homepage && (rep.name !== "codersrank-practice" && rep.name !== 'portfolio'));
+      setRepos(filterRepos);
+    });
+
+  }, []);
 
 
   return (
-    <PortfolioProvider value={{ hero, about, projects, contact, footer, repos }}>
+    <PortfolioProvider value={{ hero, about, contact, footer, repos }}>
       <Head />
       <main>
         <Hero />
