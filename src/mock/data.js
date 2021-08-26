@@ -59,7 +59,7 @@ export const projectsData = [
 export const contactData = {
   cta: '',
   btn: '',
-  email: 'roninjosue88@gmail.com',
+  email: 'cano.barcenas.reynaldo@gmail.com',
 };
 
 // FOOTER DATA
@@ -90,4 +90,4 @@ export const githubButtons = {
 
 export const darkTheme = {
   active: false,
-}
+};
