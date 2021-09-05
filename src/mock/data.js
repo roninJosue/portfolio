@@ -2,9 +2,9 @@ import { nanoid } from 'nanoid';
 
 // HEAD DATA
 export const headData = {
-  title: '', // e.g: 'Name | Developer'
+  title: 'Reynaldo Cano | Developer', // e.g: 'Name | Developer'
   lang: '', // e.g: en, es, fr, jp
-  description: '', // e.g: Welcome to my website
+  description: 'Personal Portfolio', // e.g: Welcome to my website
 };
 
 // HERO DATA
@@ -18,8 +18,10 @@ export const heroData = {
 // ABOUT DATA
 export const aboutData = {
   img: 'profile.jpg',
-  paragraphOne: '',
-  paragraphTwo: '',
+  paragraphOne:
+    'Hola, soy Reynaldo Cano, Ing. En Sistemas, me encanta crear aplicaciones web, en base a requerimientos que satisfagan las necesidades del problema. He trabajado tanto en el desarrollo de interfaces de usuario, como en el manejo y guardado de los datos.',
+  paragraphTwo:
+    ' Responsable con muchas ganas de adquirir nuevos conocimientos para mi fortalecimiento personal.',
   paragraphThree: '',
   resume: 'https://drive.google.com/file/d/1TyVLncBROnioGJHbITgFyLhcEX2F2pKP/view?usp=sharing', // if no resume, the button will not show up
 };
