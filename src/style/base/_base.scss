@@ -3,10 +3,11 @@
 :root {
   --primary-color: #{$primary-color};
   --secondary-color: #{$secondary-color};
-  --bg-color: #{$white-color};
+  --bg-color: #{$backround-color};
   --footer-bg-color: #{$black-color};
   --color-text: #{$dark-blue-text};
   --color-text-2: #{$white-color};
+  --bg-project-color: #{$white-color};
 }
 
 [data-theme="dark"] {
@@ -14,6 +15,7 @@
   --secondary-color: #{$black-color};
   --bg-color: #{$black-color};
   --color-text: #{$white-color};
+  --bg-project-color: #{$black-color};
 }
 
 html {
