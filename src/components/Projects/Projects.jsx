@@ -1,11 +1,13 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { Container, Row } from 'react-bootstrap';
-import PortfolioContext from '../../context/context';
-import Title from '../Title/Title';
+import React, { useContext, useEffect, useState } from "react";
+import { Container, Row } from "react-bootstrap";
+import PortfolioContext from "../../context/context";
+import Title from "../Title/Title";
 import Project from "./Project";
 
 const Projects = () => {
   const { repos } = useContext(PortfolioContext);
+  const { projects } = useContext(PortfolioContext);
+  const { projectsLabel } = projects;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -24,13 +26,13 @@ const Projects = () => {
     <section id="projects">
       <Container>
         <div className="project-wrapper">
-          <Title title="Projects" />
+          <Title title={projectsLabel} />
           <Row>
             {repos.length > 0 && repos.map((project) => {
-            return (
-              <Project key={project.id} isDesktop={isDesktop} isMobile={isMobile} project={project} />
-            );
-          })}
+              return (
+                <Project key={project.id} isDesktop={isDesktop} isMobile={isMobile} project={project} />
+              );
+            })}
           </Row>
         </div>
       </Container>

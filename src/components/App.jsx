@@ -9,7 +9,7 @@ import { listRepos } from '../api/repos';
 
 import { PortfolioProvider } from '../context/context';
 
-import { heroData, aboutData, contactData, footerData } from '../mock/data';
+import { heroData, aboutData, contactData, footerData, projectsData } from '../mock/data';
 
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
   const [contact, setContact] = useState({});
   const [footer, setFooter] = useState({});
   const [repos, setRepos] = useState([]);
+  const [projects, setProjects] = useState([]);
 
 
   useEffect(() => {
@@ -25,6 +26,7 @@ function App() {
     setAbout({ ...aboutData });
     setContact({ ...contactData });
     setFooter({ ...footerData });
+    setProjects({...projectsData})
   }, []);
 
   useEffect(() => {
@@ -37,7 +39,7 @@ function App() {
 
 
   return (
-    <PortfolioProvider value={{ hero, about, contact, footer, repos }}>
+    <PortfolioProvider value={{ hero, about, contact, footer, repos, projects }}>
       <Head />
       <main>
         <Hero />
