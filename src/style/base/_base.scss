@@ -8,6 +8,8 @@
   --color-text: #{$dark-blue-text};
   --color-text-2: #{$white-color};
   --bg-project-color: #{$white-color};
+  --switch-color: #{$black-color};
+  --switch-color-text: #{$white-color};
 }
 
 [data-theme="dark"] {
@@ -16,6 +18,8 @@
   --bg-color: #{$black-color};
   --color-text: #{$white-color};
   --bg-project-color: #{$black-color};
+  --switch-color: #{$white-color};
+  --switch-color-text: #{$dark-blue-text};
 }
 
 html {

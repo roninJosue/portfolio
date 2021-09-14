@@ -1,14 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
+import { translate } from "react-i18next";
 import { Container, Row } from "react-bootstrap";
 import PortfolioContext from "../../context/context";
 import Title from "../Title/Title";
 import Project from "./Project";
 
-const Projects = () => {
+const Projects = ({t}) => {
   const { repos } = useContext(PortfolioContext);
-  const { projects } = useContext(PortfolioContext);
-  const { projectsLabel } = projects;
-
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -26,7 +24,7 @@ const Projects = () => {
     <section id="projects">
       <Container>
         <div className="project-wrapper">
-          <Title title={projectsLabel} />
+          <Title title={t('projects.title')} />
           <Row>
             {repos.length > 0 && repos.map((project) => {
               return (
@@ -40,4 +38,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default translate('common')(Projects);

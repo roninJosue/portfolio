@@ -1,21 +1,22 @@
 import React, { useContext } from 'react';
+import { translate } from "react-i18next";
 import Fade from 'react-reveal/Fade';
 import { Container } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 
-const Contact = () => {
+const Contact = ({t}) => {
   const { contact } = useContext(PortfolioContext);
-  const { cta, btn, email } = contact;
+  const { email } = contact;
 
   return (
     <section id="contact">
       <Container>
-        <Title title="Contact" />
+        <Title title={t('contact.title')} />
         <Fade bottom duration={1000} delay={800} distance="30px">
           <div className="contact-wrapper">
             <p className="contact-wrapper__text">
-              {cta || 'Would you like to work with me? Awesome!'}
+              {t('contact.cta')}
             </p>
             <a
               target="_blank"
@@ -23,7 +24,7 @@ const Contact = () => {
               className="cta-btn cta-btn--resume"
               href={email ? `mailto:${email}` : 'https://github.com/cobidev/react-simplefolio'}
             >
-              {btn || "Let's Talk"}
+              {t('contact.btn')}
             </a>
           </div>
         </Fade>
@@ -32,4 +33,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default translate('common')(Contact);
