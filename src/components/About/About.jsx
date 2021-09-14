@@ -1,13 +1,14 @@
 import React, { useContext, useState, useEffect } from 'react';
+import { translate } from "react-i18next";
 import Fade from 'react-reveal/Fade';
 import { Container, Row, Col } from 'react-bootstrap';
 import Title from '../Title/Title';
 import AboutImg from '../Image/AboutImg';
 import PortfolioContext from '../../context/context';
 
-const About = () => {
+const About = ({t}) => {
   const { about } = useContext(PortfolioContext);
-  const { img, paragraphOne, paragraphTwo, paragraphThree, resume, title, resumeLabel } = about;
+  const { img, resume } = about;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -25,7 +26,7 @@ const About = () => {
   return (
     <section id="about">
       <Container>
-        <Title title={title} />
+        <Title title={t('about.title')} />
         <Row className="about-wrapper">
           <Col md={6} sm={12}>
             <Fade bottom duration={1000} delay={600} distance="30px">
@@ -38,15 +39,13 @@ const About = () => {
             <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
               <div className="about-wrapper__info">
                 <p className="about-wrapper__info-text">
-                  {paragraphOne ||
-                    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
+                  {t('about.paragraphOne')}
                 </p>
                 <p className="about-wrapper__info-text">
-                  {paragraphTwo ||
-                    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
+                  {t('about.paragraphTwo')}
                 </p>
                 <p className="about-wrapper__info-text">
-                  {paragraphThree || ''}
+
                 </p>
                 {resume && (
                   <span className="d-flex mt-3">
@@ -56,7 +55,7 @@ const About = () => {
                       className="cta-btn cta-btn--resume"
                       href={resume}
                     >
-                      {resumeLabel}
+                      {t('about.resumeLabel')}
                     </a>
                   </span>
                 )}
@@ -69,4 +68,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default translate('common')(About);

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {I18nextProvider} from "react-i18next";
 import Hero from './Hero/Hero';
 import About from './About/About';
 import Projects from './Projects/Projects';
@@ -6,6 +7,7 @@ import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
 import Head from './Head/Head';
 import { listRepos } from '../api/repos';
+import i18n from "../i18n";
 
 import { PortfolioProvider } from '../context/context';
 
@@ -39,16 +41,18 @@ function App() {
 
 
   return (
-    <PortfolioProvider value={{ hero, about, contact, footer, repos, projects }}>
-      <Head />
-      <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Contact />
-      </main>
-      <Footer />
-    </PortfolioProvider>
+    <I18nextProvider i18n={i18n}>
+      <PortfolioProvider value={{ hero, about, contact, footer, repos, projects }}>
+        <Head />
+        <main>
+          <Hero />
+          <About />
+          <Projects />
+          <Contact />
+        </main>
+        <Footer />
+      </PortfolioProvider>
+    </I18nextProvider>
   );
 }
 

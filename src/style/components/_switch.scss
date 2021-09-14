@@ -1,0 +1,65 @@
+.language {
+  &-toggle {
+    background-color: var(--switch-color);
+    border-radius: 50px;
+    box-sizing: border-box;
+    height: 30px;
+    max-height: 30px;
+    transition: 400ms cubic-bezier(0, 0, 0, 1);
+    width: 70px;
+    //margin: 5% auto;
+    margin-left: 2rem;
+
+    a {
+      text-decoration: none;
+    }
+
+    .labels{
+      position: absolute;
+      z-index: 10;
+      color: var(--switch-color-text);
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .label-en {
+      &:before {
+        content: attr(data-lang);
+        position: relative;
+        top: 5px;
+        left: 10px;
+      }
+    }
+
+    .label-es {
+      &:before{
+        content: attr(data-lang);
+        position: relative;
+        top: -21px;
+        right: 25px;
+      }
+    }
+
+    .unclickable {
+      background-color: #ddd;
+    }
+  }
+
+  &-switch{
+    background: var(--switch-color-text);
+    border-radius: 100%;
+    height: 22px;
+    top: 4px;
+    margin: 4px;
+    position: relative;
+    left: 0;
+    width: 22px;
+    z-index: 2;
+    transition: left 400ms cubic-bezier(0, 0, 0, 1);
+
+    &.on {
+      left: 40px;
+    }
+  }
+}

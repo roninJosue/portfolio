@@ -1,0 +1,24 @@
+{
+  "head": {
+    "title": "Hola, soy",
+    "name": "Reynaldo Cano",
+    "subTitle": "Ing. en Sistemas de Información",
+    "cta": "Conoce más"
+  },
+  "about": {
+    "title": "Acerca de mí",
+    "paragraphOne": "Hola, soy Reynaldo Cano, Ing. En Sistemas, me encanta crear aplicaciones web, en base a requerimientos que satisfagan las necesidades del problema. He trabajado tanto en el desarrollo de interfaces de usuario, como en el manejo y guardado de los datos.",
+    "paragraphTwo": "Responsable con muchas ganas de adquirir nuevos conocimientos para mi fortalecimiento personal.",
+    "resumeLabel": "CURRÍCULO"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "demo": "Demo",
+    "code": "Código"
+  },
+  "contact": {
+    "title": "Contácto",
+    "cta": "¿Te gustaría trabajar conmigo?",
+    "btn": "Envíame un correo"
+  }
+}

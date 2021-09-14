@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
+import LanguageSwitch from "./LanguageSwitch";
 
 const Head = () => {
   const [theme, setTheme] = useState(false);
@@ -25,6 +26,7 @@ const Head = () => {
                       : <i className="fa fa-moon-o" />
               }
             </div>
+            <LanguageSwitch />
           </Fade>
         </Row>
       </Container>

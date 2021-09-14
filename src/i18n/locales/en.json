@@ -1,0 +1,24 @@
+{
+  "head": {
+    "title": "Hello, I'm",
+    "name": "Reynaldo Cano",
+    "subTitle": "Systems Engineer",
+    "cta": "Know nore"
+  },
+  "about": {
+    "title": "About me",
+    "paragraphOne": "Hi, I'm Reynaldo Cano, Systems Engineer, I love creating web applications, based on requirements that meet the needs of the problem. I have worked both in the development of user interfaces, as in the handling and saving of the data.",
+    "paragraphTwo": "Responsible eager to acquire new knowledge for my personal strengthening.",
+    "resumeLabel": "RESUME"
+  },
+  "projects": {
+    "title": "Projects",
+    "demo": "See Live",
+    "code": "Source Code"
+  },
+  "contact": {
+    "title": "Contact",
+    "cta": "Would you like to work with me? Awesome!",
+    "btn": "Let's Talk"
+  }
+}

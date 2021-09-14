@@ -1,11 +1,17 @@
-import React from 'react';
-import { Col } from 'react-bootstrap';
-import Fade from 'react-reveal/Fade';
-import Tilt from 'react-tilt';
-import ProjectImg from '../Image/ProjectImg';
+import React from "react";
+import { Col } from "react-bootstrap";
+import Fade from "react-reveal/Fade";
+import Tilt from "react-tilt";
+import ProjectImg from "../Image/ProjectImg";
 
 const Project = (props) => {
-  const { project: { name, description, info2, homepage, html_url: htmlUrl }, isDesktop, isMobile } = props;
+  const {
+    project: { name, description, info2, homepage, html_url: htmlUrl },
+    isDesktop,
+    isMobile,
+    demo,
+    code
+  } = props;
 
   return (
     <Col md={6} lg={4} sm={12} className="mb-4">
@@ -46,12 +52,11 @@ const Project = (props) => {
             </div>
             <div>
               <div className="project-wrapper__text">
-                <h3 className="project-wrapper__text-title">{name || "Project Title"}</h3>
+                <h3 className="project-wrapper__text-title">{name}</h3>
                 <p>
-                  {description ||
-                  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae."}
+                  {description}
                 </p>
-                <p className="mb-4">{info2 || ""}</p>
+                <p className="mb-4">{info2}</p>
               </div>
             </div>
           </div>
@@ -60,9 +65,9 @@ const Project = (props) => {
               target="_blank"
               rel="noopener noreferrer"
               className="cta-btn cta-btn--hero"
-              href={homepage || "#!"}
+              href={homepage}
             >
-              See Live
+              {demo}
             </a>
 
             {htmlUrl && (
@@ -72,7 +77,7 @@ const Project = (props) => {
                 className="cta-btn text-color-main"
                 href={htmlUrl}
               >
-                Source Code
+                {code}
               </a>
             )}
           </div>
