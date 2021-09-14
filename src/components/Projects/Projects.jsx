@@ -28,7 +28,14 @@ const Projects = ({t}) => {
           <Row>
             {repos.length > 0 && repos.map((project) => {
               return (
-                <Project key={project.id} isDesktop={isDesktop} isMobile={isMobile} project={project} />
+                <Project
+                  key={project.id}
+                  isDesktop={isDesktop} 
+                  isMobile={isMobile}
+                  project={project}
+                  demo={t('projects.demo')}
+                  code={t('projects.code')}
+                />
               );
             })}
           </Row>

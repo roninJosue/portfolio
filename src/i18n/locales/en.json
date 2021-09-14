@@ -12,7 +12,9 @@
     "resumeLabel": "RESUME"
   },
   "projects": {
-    "title": "Projects"
+    "title": "Projects",
+    "demo": "See Live",
+    "code": "Source Code"
   },
   "contact": {
     "title": "Contact",

@@ -12,7 +12,9 @@
     "resumeLabel": "CURRÍCULO"
   },
   "projects": {
-    "title": "Proyectos"
+    "title": "Proyectos",
+    "demo": "Demo",
+    "code": "Código"
   },
   "contact": {
     "title": "Contácto",
