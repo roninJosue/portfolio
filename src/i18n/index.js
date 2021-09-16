@@ -6,7 +6,7 @@ const options = {
   interpolation: {
     escapeValue: false
   },
-  debug: true,
+  debug: false,
   resources: {
     es: {
       common: es
