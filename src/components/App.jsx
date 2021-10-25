@@ -1,20 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import {I18nextProvider} from "react-i18next";
-import Hero from './Hero/Hero';
-import About from './About/About';
-import Projects from './Projects/Projects';
-import Contact from './Contact/Contact';
+import { Helmet } from 'react-helmet';
 import Footer from './Footer/Footer';
 import Head from './Head/Head';
 import { listRepos } from '../api/repos';
+
 import i18n from "../i18n";
 
 import { PortfolioProvider } from '../context/context';
+import {
+  heroData,
+  aboutData,
+  contactData,
+  footerData,
+  projectsData
+} from '../mock/data';
 
-import { heroData, aboutData, contactData, footerData, projectsData } from '../mock/data';
 
-
-function App() {
+function App(props) {
   const [hero, setHero] = useState({});
   const [about, setAbout] = useState({});
   const [contact, setContact] = useState({});
@@ -41,18 +44,23 @@ function App() {
 
 
   return (
-    <I18nextProvider i18n={i18n}>
-      <PortfolioProvider value={{ hero, about, contact, footer, repos, projects }}>
-        <Head />
-        <main>
-          <Hero />
-          <About />
-          <Projects />
-          <Contact />
-        </main>
-        <Footer />
-      </PortfolioProvider>
-    </I18nextProvider>
+    <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Page not found</title>
+        <html lang={'en' || 'en'} />
+        <meta name="description" content="Page not found" />
+      </Helmet>
+      <I18nextProvider i18n={i18n}>
+        <PortfolioProvider value={{ hero, about, contact, footer, repos, projects }}>
+          <Head />
+          <main className='main'>
+            {props.children}
+          </main>
+          <Footer />
+        </PortfolioProvider>
+      </I18nextProvider>
+    </>
   );
 }
 

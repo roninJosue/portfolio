@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import LanguageSwitch from "./LanguageSwitch";
+import Nav from '../Nav';
 
 const Head = () => {
   const [theme, setTheme] = useState(false);
@@ -20,6 +21,7 @@ const Head = () => {
       <Container>
         <Row className="justify-content-end align-items-center">
           <Fade right duration={1000} delay={100} distance="30px">
+            <Nav />
             <div role="button" className="icon-theme" onClick={handleChange}>
               {
                 theme ? <i className="fa fa-sun-o" />

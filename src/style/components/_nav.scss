@@ -1,0 +1,10 @@
+.nav {
+  &-list {
+    list-style: none;
+    display: inline-flex;
+    margin: 0;
+  }
+  &-item{
+    min-width: 100px;
+  }
+}
