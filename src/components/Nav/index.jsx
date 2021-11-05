@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'gatsby'
 
-const Nav = () => {
+const Nav = ({visible}) => {
   return(
     <nav className='nav'>
       <ul className='nav-list'>

@@ -1,35 +1,29 @@
-import React, { useState } from 'react';
+import React from 'react';
+import useHead from './hooks/useHead';
 import { Container, Row } from 'react-bootstrap';
-import Fade from 'react-reveal/Fade';
-import LanguageSwitch from "./LanguageSwitch";
+import LanguageSwitch from './components/LanguageSwitch';
 import Nav from '../Nav';
+import Theme from './components/Theme';
 
 const Head = () => {
-  const [theme, setTheme] = useState(false);
 
-  const handleChange = () => {
-    setTheme(!theme);
-    if (theme) {
-      document.documentElement.setAttribute('data-theme', 'light');
-    } else {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    }
-  };
+  const {
+    theme,
+    visible,
+    handleChange,
+  } = useHead();
 
   return (
-    <header id="head">
+    <header id='head' style={{ display: `${visible ? 'block' : 'none'}` }}>
       <Container>
-        <Row className="justify-content-end align-items-center">
-          <Fade right duration={1000} delay={100} distance="30px">
-            <Nav />
-            <div role="button" className="icon-theme" onClick={handleChange}>
-              {
-                theme ? <i className="fa fa-sun-o" />
-                      : <i className="fa fa-moon-o" />
-              }
-            </div>
-            <LanguageSwitch />
-          </Fade>
+        <Row className='justify-content-end align-items-center'>
+          <h1 className='justify'>Logo</h1>
+          <Nav visible={visible} />
+          <Theme
+            theme={theme}
+            handleChange={handleChange}
+          />
+          <LanguageSwitch />
         </Row>
       </Container>
     </header>
