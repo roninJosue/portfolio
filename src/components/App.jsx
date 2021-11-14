@@ -47,7 +47,7 @@ function App(props) {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Page not found</title>
+        <title>Reynaldo Cano</title>
         <html lang={'en' || 'en'} />
         <meta name="description" content="Page not found" />
       </Helmet>

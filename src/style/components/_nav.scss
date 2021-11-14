@@ -4,7 +4,23 @@
     display: inline-flex;
     margin: 0;
   }
-  &-item{
+
+  &-item {
     min-width: 100px;
+  }
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    background: orange;
+    height: 70px;
+    align-items: center;
+    padding: 0 15rem;
+  }
+
+  &-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }

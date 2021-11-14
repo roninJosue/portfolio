@@ -15,17 +15,19 @@ const Head = () => {
 
   return (
     <header id='head' style={{ display: `${visible ? 'block' : 'none'}` }}>
-      <Container>
-        <Row className='justify-content-end align-items-center'>
-          <h1 className='justify'>Logo</h1>
+      <div className='nav-container'>
+        <h1 className='justify'>Logo</h1>
+        <div className='nav-wrap'>
           <Nav visible={visible} />
-          <Theme
-            theme={theme}
-            handleChange={handleChange}
-          />
-          <LanguageSwitch />
-        </Row>
-      </Container>
+          <div className='nav-wrap'>
+            <Theme
+              theme={theme}
+              handleChange={handleChange}
+            />
+            <LanguageSwitch />
+          </div>
+        </div>
+      </div>
     </header>
   );
 };
