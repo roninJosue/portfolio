@@ -15,7 +15,7 @@ const options = {
       common: en
     },
   },
-  fallbackLng: 'es',
+  fallbackLng: 'en',
   ns: ['common'],
   defaultNS: 'common',
   react: {

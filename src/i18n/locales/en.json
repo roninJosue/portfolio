@@ -20,5 +20,12 @@
     "title": "Contact",
     "cta": "Would you like to work with me? Awesome!",
     "btn": "Let's Talk"
+  },
+  "menu": {
+    "home": "Home",
+    "about": "About",
+    "education": "Education",
+    "projects": "Projects",
+    "contact": "Contact"
   }
 }

@@ -1,28 +1,39 @@
-import React from 'react'
-import {Link} from 'gatsby'
+import React from 'react';
+import { translate } from 'react-i18next';
+import { Link } from 'gatsby';
 import LanguageSwitch from '../Head/components/LanguageSwitch';
 import Theme from '../Head/components/Theme';
 
-const Nav = ({visible}) => {
-  return(
+const arrLinks = [
+  { link: '/', text: 'menu.home' },
+  { link: '/about', text: 'menu.about' },
+  { link: '/education', text: 'menu.education' },
+  { link: '/projects', text: 'menu.projects' },
+  { link: '/contact', text: 'menu.contact' },
+];
+
+const Nav = ({ t }) => {
+  return (
     <nav className='nav'>
       <ul className='nav-list'>
-        <li className='nav-item'>
-          <Link to='/'>Home</Link>
-        </li>
-        <li className='nav-item'>
-          <Link to='/about'>About</Link>
-        </li>
-        <li className='nav-item'>
-          <Link to='/projects'>Projects</Link>
-        </li>
-        <li className='nav-item'>
-          <Link to='/contact'>Contact</Link>
-        </li>
+        {arrLinks.map((link) => {
+          return (
+            <li className='nav-item' key={link.link}>
+              <Link
+                className='nav-item-link'
+                activeClassName='nav-item__active'
+                to={link.link}
+              >
+                {t(link.text)}
+              </Link>
+            </li>
+          );
+        })}
         <li className='nav-item'>
           <Theme
             theme={'dark'}
-            handleChange={() =>{}}
+            handleChange={() => {
+            }}
           />
         </li>
         <li className='nav-item'>
@@ -30,7 +41,7 @@ const Nav = ({visible}) => {
         </li>
       </ul>
     </nav>
-  )
-}
+  );
+};
 
-export default Nav
+export default translate('common')(Nav);

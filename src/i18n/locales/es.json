@@ -20,5 +20,12 @@
     "title": "Contácto",
     "cta": "¿Te gustaría trabajar conmigo?",
     "btn": "Envíame un correo"
+  },
+  "menu": {
+    "home": "Inicio",
+    "about": "Acerca",
+    "education": "Educación",
+    "projects": "Proyectos",
+    "contact": "Contácto"
   }
 }

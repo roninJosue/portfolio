@@ -10,6 +10,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &-link {
+      width: 100%;
+      border-bottom: 4px solid transparent;
+      transition: all .5ms ease-in-out;
+      color: #01c2ad;
+      padding: 0.625rem;
+
+      &:active,
+      &:visited{
+        color: #00c5ad;
+      }
+
+      &:hover {
+        border-bottom-color: #00c5ad;
+      }
+    }
+
+    &__active {
+      transition: all .5ms ease-in-out;
+      border-bottom-color: #00c5ad;
+      font-weight: bold;
+    }
   }
 
   &-container {
