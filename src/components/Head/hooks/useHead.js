@@ -1,39 +1,23 @@
 import {useState, useEffect} from 'react';
 import {debounce} from '../../../util/helpers';
-
-const getThemeFromLocalStorage = localStorage.getItem('theme')
+import useScroll from '../../Nav/hooks/useScroll';
 
 const useHead = () => {
-  const [theme, setTheme] = useState(getThemeFromLocalStorage || 'light')
   const [visible, setVisible] = useState(true)
-  const [prevScrollPos, setPrevScrollPos] = useState(0)
+  const scroll = useScroll()
 
-  const handleScroll = debounce(() => {
-    const currentScrollPos = window.pageYOffset
-    const isVisible = ((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70) || currentScrollPos < 10)
-    setVisible(isVisible)
-    setPrevScrollPos(currentScrollPos)
-  }, 100)
-
+  // update classList of nav on scroll
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
+    const classList = [];
 
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [visible])
+    if (scroll.y > 150 && scroll.y - scroll.lastY > 0)
+      classList.push("nav-bar--hidden");
 
-  const handleChange = () => {
-    setTheme(!theme);
-    if (theme) {
-      document.documentElement.setAttribute('data-theme', 'light');
-    } else {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    }
-  };
+    setVisible(classList);
+  }, [scroll.y, scroll.lastY]);
 
   return {
-    theme,
     visible,
-    handleChange
   }
 }
 

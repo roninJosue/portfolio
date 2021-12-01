@@ -6,13 +6,14 @@
 @import './base/base';
 @import './base/typography';
 
-@import './components/buttons';
-@import './components/switch';
-@import './components/nav';
-
 @import './layout/footer';
 @import './layout/sections';
 @import './layout/main';
+
+@import './components/buttons';
+@import './components/switch';
+@import './components/nav';
+@import './components/logo';
 
 @import './sections/about';
 @import './sections/contact';

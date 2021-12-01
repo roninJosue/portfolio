@@ -1,31 +1,22 @@
-import React from 'react';
+import React  from 'react';
 import useHead from './hooks/useHead';
-import { Container, Row } from 'react-bootstrap';
 import LanguageSwitch from './components/LanguageSwitch';
 import Nav from '../Nav';
 import Theme from './components/Theme';
+import Logo from '../Logo/Logo';
 
 const Head = () => {
 
   const {
-    theme,
     visible,
-    handleChange,
   } = useHead();
 
   return (
-    <header id='head' style={{ display: `${visible ? 'block' : 'none'}` }}>
+    <header id='head' className={visible}>
       <div className='nav-container'>
-        <h1 className='justify'>Logo</h1>
+        <Logo />
         <div className='nav-wrap'>
           <Nav visible={visible} />
-          <div className='nav-wrap'>
-            <Theme
-              theme={theme}
-              handleChange={handleChange}
-            />
-            <LanguageSwitch />
-          </div>
         </div>
       </div>
     </header>

@@ -1,5 +1,7 @@
 import React from 'react'
 import {Link} from 'gatsby'
+import LanguageSwitch from '../Head/components/LanguageSwitch';
+import Theme from '../Head/components/Theme';
 
 const Nav = ({visible}) => {
   return(
@@ -16,6 +18,15 @@ const Nav = ({visible}) => {
         </li>
         <li className='nav-item'>
           <Link to='/contact'>Contact</Link>
+        </li>
+        <li className='nav-item'>
+          <Theme
+            theme={'dark'}
+            handleChange={() =>{}}
+          />
+        </li>
+        <li className='nav-item'>
+          <LanguageSwitch />
         </li>
       </ul>
     </nav>
