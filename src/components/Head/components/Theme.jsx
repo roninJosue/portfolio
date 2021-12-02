@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {FaSun, FaMoon} from 'react-icons/fa';
 
 const getThemeFromLocalStorage = localStorage.getItem('theme')
 
@@ -16,8 +17,8 @@ const Theme = () => {
   return(
     <div role='button' className='icon-theme' onClick={handleChange}>
       {
-        theme ? <i className='fa fa-sun-o' />
-          : <i className='fa fa-moon-o' />
+        theme ? <FaSun size={'3em'} />
+          : <FaMoon size={'3em'} />
       }
     </div>
   )
