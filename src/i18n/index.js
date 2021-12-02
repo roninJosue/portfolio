@@ -8,12 +8,12 @@ const options = {
   },
   debug: false,
   resources: {
-    es: {
-      common: es
-    },
     en: {
       common: en
     },
+    es: {
+      common: es
+    }
   },
   fallbackLng: 'en',
   ns: ['common'],

@@ -1,10 +1,19 @@
 .logo {
+
+  &:hover,
+  &:link,
+  &:visited{
+    color: var(--color-text);
+    font-weight: bold;
+  }
+
   &_text {
     font-family: 'Agustina', serif;
-    font-size: 3rem;
+    font-size: 2.8rem;
+    margin: 0 .625rem;
 
     &-arrow{
-      font-size: 4rem;
+      font-size: 3rem;
     }
   }
 }

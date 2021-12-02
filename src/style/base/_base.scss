@@ -10,6 +10,7 @@
   --bg-project-color: #{$white-color};
   --switch-color: #{$black-color};
   --switch-color-text: #{$white-color};
+  --box-shadow-head: rgba(0,0,0,0);
 }
 
 [data-theme="dark"] {
@@ -20,6 +21,7 @@
   --bg-project-color: #{$black-color};
   --switch-color: #{$white-color};
   --switch-color-text: #{$dark-blue-text};
+  --box-shadow-head: rgba(2,12,27,0.7);
 }
 
 html {

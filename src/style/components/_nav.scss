@@ -14,23 +14,25 @@
     &-link {
       width: 100%;
       border-bottom: 4px solid transparent;
-      transition: all .5ms ease-in-out;
-      color: #01c2ad;
+      transition: all .1ms ease-in-out;
+      color: var(--color-text);
       padding: 0.625rem;
 
       &:active,
+      &:hover,
       &:visited{
-        color: #00c5ad;
+        color: var(--color-text);
+        font-weight: bold;
       }
 
       &:hover {
-        border-bottom-color: #00c5ad;
+        border-bottom-color: var(--color-text);
       }
     }
 
     &__active {
       transition: all .5ms ease-in-out;
-      border-bottom-color: #00c5ad;
+      border-bottom-color: var(--color-text);
       font-weight: bold;
     }
   }
