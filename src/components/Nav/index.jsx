@@ -6,7 +6,6 @@ import Theme from '../Head/components/Theme';
 
 const arrLinks = [
   { link: '/', text: 'menu.home' },
-  { link: '/about', text: 'menu.about' },
   { link: '/education', text: 'menu.education' },
   { link: '/projects', text: 'menu.projects' },
   { link: '/contact', text: 'menu.contact' },

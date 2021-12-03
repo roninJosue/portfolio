@@ -1,5 +1,6 @@
 import React from 'react'
 import { nanoid } from 'nanoid';
+import SocialNetwork from '../../SocialNetwork';
 
 const Greeting = ({name, text}) => {
   return(
@@ -12,7 +13,7 @@ const Greeting = ({name, text}) => {
           <p className='hero-text' key={nanoid()}>{t}</p>
         )
       })}
-      <div>Holi</div>
+      <SocialNetwork />
     </>
   )
 }
