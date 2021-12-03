@@ -1,0 +1,38 @@
+@mixin social-icon($color) {
+  color: $color;
+  &:hover {
+    color: darken($color, 10%);
+    transform: translateY(-3px);
+  }
+}
+
+.social-networks {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+
+  &-github {
+    @include social-icon(#333);
+  }
+
+  &-linkedin {
+    @include social-icon(#0e76a8);
+  }
+
+  &-gmail {
+    @include social-icon(#ea4335);
+  }
+
+  &-instagram {
+    @include social-icon(#e4405f);
+  }
+
+  &-github,
+  &-linkedin,
+  &-gmail,
+  &-instagram {
+    transition: all 50ms ease-in-out;
+  }
+
+}
