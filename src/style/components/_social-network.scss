@@ -2,7 +2,9 @@
   color: $color;
   &:hover {
     color: darken($color, 10%);
-    transform: translateY(-3px);
+    transform: translateY(-3px) rotate(180deg);
+    -webkit-box-shadow: 5px 12px 50px -18px rgba(0,0,0,0.63);
+    box-shadow: 5px 12px 50px -18px rgba(0,0,0,0.63);
   }
 }
 
@@ -10,7 +12,11 @@
   width: 250px;
   display: flex;
   justify-content: space-between;
-  margin-top: 2rem;
+
+  @include respond(phone){
+    width: 100%;
+    margin: 4rem 0;
+  }
 
   &-github {
     @include social-icon(#333);
@@ -32,7 +38,16 @@
   &-linkedin,
   &-gmail,
   &-instagram {
-    transition: all 50ms ease-in-out;
+    transition: all 500ms ease-in-out;
+    font-size: 4rem;
+  }
+
+  &-github__2,
+  &-linkedin__2,
+  &-gmail__2,
+  &-instagram__2 {
+    color: #fff;
+    font-size: 2.5rem;
   }
 
 }

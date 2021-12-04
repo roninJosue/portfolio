@@ -1,4 +1,4 @@
-#head{
+.head{
   color: var(--color-text);
   top: 0;
   position: sticky;
@@ -7,6 +7,7 @@
 
   background-image: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   box-shadow: 0 10px 30px -10px var(--box-shadow-head);
+  transition: all .3s cubic-bezier(1,.53,.83,.67);
 
   .icon-theme {
     cursor: pointer;
@@ -17,4 +18,9 @@
     font-size: 3.5rem;
     margin-top: 4px;
   }
+}
+
+.nav-bar--hidden {
+  top: -70px;
+  background-color: rebeccapurple;
 }

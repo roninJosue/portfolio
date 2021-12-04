@@ -1,10 +1,11 @@
 .footer {
   background-color: var(--footer-bg-color);
   color: $white-color;
-  padding: 4.8rem 0;
+  padding: 3rem 0;
 
   @include respond(phone) {
-    border: 0px;
+    border: 0;
+    padding: 0;
   }
 
   &__text {

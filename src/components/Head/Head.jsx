@@ -1,8 +1,6 @@
 import React  from 'react';
 import useHead from './hooks/useHead';
-import LanguageSwitch from './components/LanguageSwitch';
 import Nav from '../Nav';
-import Theme from './components/Theme';
 import Logo from '../Logo/Logo';
 
 const Head = () => {
@@ -12,7 +10,7 @@ const Head = () => {
   } = useHead();
 
   return (
-    <header id='head' className={visible}>
+    <header id='head' className={`head ${visible.join(' ')}`}>
       <div className='nav-container'>
         <Logo />
         <div className='nav-wrap'>

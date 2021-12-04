@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react';
 import useScroll from '../../Nav/hooks/useScroll';
 
 const useHead = () => {
-  const [visible, setVisible] = useState(true)
+  const [visible, setVisible] = useState([])
   const scroll = useScroll()
 
   // update classList of nav on scroll
