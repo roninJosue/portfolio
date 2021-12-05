@@ -76,10 +76,6 @@
   }
 
   &-img{
-    width: 70%;
-
-    @include respond(phone) {
-      width: 100%;
-    }
+    width: 100%
   }
 }

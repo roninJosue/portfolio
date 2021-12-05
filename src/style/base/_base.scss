@@ -11,6 +11,7 @@
   --switch-color: #{$black-color};
   --switch-color-text: #{$white-color};
   --box-shadow-head: rgba(0,0,0,0);
+  --hamburger-width: 30px;
 }
 
 [data-theme="dark"] {
@@ -32,4 +33,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   background: var(--bg-color);
+}
+
+.body-aside{
+  overflow: hidden;
 }

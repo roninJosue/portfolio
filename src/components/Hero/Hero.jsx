@@ -26,7 +26,7 @@ const Header = ({ t }) => {
   return (
     <section id="hero" className="jumbotron hero">
       <Container fluid>
-        <Row>
+        <Row className='justify-content-center align-items-center'>
           <Col md={6} sm={12}>
             <Fade left={isDesktop} bottom={isMobile} duration={1000}  distance="30px">
               <Greeting
