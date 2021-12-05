@@ -7,12 +7,13 @@ const Theme = () => {
   const [theme, setTheme] = useState(getThemeFromLocalStorage || 'light')
 
   const handleChange = () => {
-    setTheme(!theme);
-    if (theme) {
-      document.documentElement.setAttribute('data-theme', 'light');
-    } else {
+    const newTheme = theme === 'light' ? 'dark' : 'light'
+    setTheme(newTheme);
+    //if (theme) {
+      document.documentElement.setAttribute('data-theme', newTheme);
+    /*} else {
       document.documentElement.setAttribute('data-theme', 'dark');
-    }
+    }*/
   };
   return(
     <div role='button' className='icon-theme' onClick={handleChange}>
