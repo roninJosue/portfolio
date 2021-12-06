@@ -27,5 +27,16 @@
     "education": "Education",
     "projects": "Projects",
     "contact": "Contact"
+  },
+  "education": {
+    "title": "Education",
+    "paragraphOne": "List of degrees and certificates obtained throughout my professional life",
+    "degrees": "Degrees Received",
+    "degreesList": [
+      {
+        "degree": "System e",
+        "institution": "Universidad Nacional Autónoma de Nicaragua (UNAN - León)"
+      }
+    ]
   }
 }

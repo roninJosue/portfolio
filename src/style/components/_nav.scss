@@ -154,6 +154,10 @@ $transition-velocity: 100ms;
     align-items: center;
     padding: 0 15rem;
 
+    @include respond(tab-land){
+      padding: 0 7rem;
+    }
+
     @include respond(tab-port) {
       padding: 0 3rem;
     }

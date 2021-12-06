@@ -1,0 +1,24 @@
+.svg-image{
+ // width: 800px;
+  height: 400px;
+
+  @include respond(tab-port){
+    height: 400px;
+  }
+
+  @include respond(phone) {
+    height: 300px;
+  }
+
+  @include respond(phone-xs) {
+    height: 250px;
+  }
+
+  img {
+    height: 100%;
+
+    @include respond(phone) {
+      height: 70%;
+    }
+  }
+}

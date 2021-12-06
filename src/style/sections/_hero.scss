@@ -5,6 +5,11 @@
   align-items: center;
   border-bottom: 0;
 
+  @include respond(phone){
+    min-height: auto;
+    height: auto;
+  }
+
   background: var(--bg-color);
   font-weight: 400;
   color: var(--color-text);

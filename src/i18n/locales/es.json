@@ -27,5 +27,16 @@
     "education": "Educación",
     "projects": "Proyectos",
     "contact": "Contácto"
+  },
+  "education": {
+    "title": "Educación",
+    "paragraphOne": "Listado de grados y certificados obtenidos a lo largo de mi vida profesional",
+    "degrees": "Grados recibidos",
+    "degreesList": [
+      {
+        "degree": "Ing. en Sistemas de Información",
+        "institution": "Universidad Nacional Autónoma de Nicaragua (UNAN - León)"
+      }
+    ]
   }
 }

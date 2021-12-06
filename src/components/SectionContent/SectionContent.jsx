@@ -1,9 +1,8 @@
-import React from "react";
+import React from "react"
 import { nanoid } from "nanoid";
-import SocialNetwork from "../../SocialNetwork";
 
-const Greeting = ({ name, text }) => {
-  return (
+const SectionContent = ({name, text, ...props}) => {
+  return(
     <>
       <h1 className="hero-title">
         <span className="text-color-main">{name}</span>
@@ -15,10 +14,9 @@ const Greeting = ({ name, text }) => {
           );
         })}
       </div>
-      <SocialNetwork />
+      {props.children}
     </>
-  );
-};
+  )
+}
 
-
-export default Greeting;
+export default SectionContent
