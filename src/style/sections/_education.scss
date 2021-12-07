@@ -1,0 +1,48 @@
+.education {
+  &-title{
+    font-size: 3.4rem;
+    font-weight: bold;
+  }
+}
+
+.grade {
+  &-wrap {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    cursor: pointer;
+    height: 200px;
+    width: 500px;
+    padding: 2rem 5rem;
+    background-color: var(--bg-project-color);
+    border-radius: 5px;
+    margin: 1rem;
+    transition: all .15s ease;
+    -webkit-box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07)!important;
+    box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07)!important;
+
+    &:hover{
+      transform: translateY(-10px);
+      box-shadow: none;
+    }
+  }
+
+  &-institution,
+  &-degree,
+  &-period {
+    text-align: left;
+  }
+
+  &-degree{
+    font-size: 1.8rem;
+  }
+
+  &-institution{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  &-period{
+    font-size: 1.5rem;
+  }
+}
