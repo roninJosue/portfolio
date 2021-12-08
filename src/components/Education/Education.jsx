@@ -1,4 +1,5 @@
 import React from "react";
+import {FaExternalLinkAlt} from "react-icons/all";
 import { translate } from "react-i18next";
 import { Col, Row } from "react-bootstrap";
 import Fade from "react-reveal/Fade";
@@ -17,9 +18,31 @@ const degrees = [
   }
 ];
 
+const certificates = [
+  {
+    degree: "education.certificatesList.0.degree",
+    institution: "education.certificatesList.0.institution",
+    certificateLink: "https://www.freecodecamp.org/certification/roninjosue/responsive-web-design",
+    issued: "education.certificatesList.0.issued"
+  },
+  {
+    degree: "education.certificatesList.1.degree",
+    institution: "education.certificatesList.1.institution",
+    certificateLink: "https://www.freecodecamp.org/certification/roninjosue/javascript-algorithms-and-data-structures",
+    issued: "education.certificatesList.1.issued"
+  },
+  {
+    degree: "education.certificatesList.2.degree",
+    institution: "education.certificatesList.2.institution",
+    certificateLink: "https://certificates.cs50.io/60e7d0d8-1116-4b41-a140-d66457f81eb4.pdf?size=letter",
+    issued: "education.certificatesList.2.issued"
+  }
+];
+
 const Education = ({ t }) => {
   return (
     <Section
+      cls="hero hero__2"
       left={
         (
           <SvgImage
@@ -38,24 +61,40 @@ const Education = ({ t }) => {
       )}
       sectionId="education"
     >
-      <Degrees t={t} />
+      <Degrees
+        t={t}
+        list={degrees}
+        head="education.degrees"
+      />
+      <Degrees
+        t={t}
+        head="education.certificates"
+        list={certificates}
+      />
     </Section>
   );
 };
 
-const Degrees = ({ t }) => {
+const Degrees = ({ t, list, head }) => {
   return (
     <>
       <Row className="mt-5 flex-wrap justify-content-center">
         <Col lg={12}>
           <Title
-            title={t("education.degrees")}
+            title={t(head)}
             cls="education-title"
           />
         </Col>
       </Row>
-      <Row className="mt-5">
-        {degrees.map(degree => (
+      <Row
+        className="
+        mt-5
+        flex-wrap
+        justify-content-center
+        justify-content-md-between
+        "
+      >
+        {list.map(degree => (
           <Fade
             left
             duration={1000}
@@ -67,6 +106,9 @@ const Degrees = ({ t }) => {
                 institution={t(degree.institution)}
                 from={degree.from}
                 to={degree.to}
+                issued={t(degree.issued)}
+                certificateLink={degree.certificateLink}
+                see={t('education.seeCertificate')}
               />
             </Col>
           </Fade>
@@ -76,12 +118,33 @@ const Degrees = ({ t }) => {
   );
 };
 
-const DegreesItem = ({ degree, institution, from, to }) => {
+const DegreesItem = (
+  {
+    degree,
+    institution,
+    from,
+    to,
+    issued,
+    certificateLink,
+    see
+  }
+) => {
   return (
     <div className="grade-wrap">
       <h2 className="grade-institution">{institution}</h2>
       <div className="grade-degree">{degree}</div>
-      <span className="grade-period">{`${from} - ${to}`}</span>
+      {from && to && (
+        <span className="grade-period">{`${from} - ${to}`}</span>
+      )}
+      {issued && (
+        <span className="grade-period">{issued}</span>
+      )}
+      {certificateLink && (
+        <a className='text-left' rel="stylesheet" target="_blank" href={certificateLink}>
+          <span className='mr-4'>{see}</span>
+          {<FaExternalLinkAlt />}
+        </a>
+      )}
     </div>
   );
 };

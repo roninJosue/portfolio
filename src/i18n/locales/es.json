@@ -31,12 +31,31 @@
   "education": {
     "title": "Educación",
     "paragraphOne": "Listado de grados y certificados obtenidos a lo largo de mi vida profesional",
-    "degrees": "Grados recibidos",
+    "degrees": "Grados obtenidos",
     "degreesList": [
       {
         "degree": "Ing. en Sistemas de Información",
         "institution": "Universidad Nacional Autónoma de Nicaragua (UNAN - León)"
       }
-    ]
+    ],
+    "certificates": "Certificados",
+    "certificatesList": [
+      {
+        "degree": "Diseño Web Adaptable",
+        "issued": "Emitido 29 de febrero, 2020",
+        "institution": "freeCodeCamp"
+      },
+      {
+        "degree": "Estructuras de datos y algoritmos JavaScript",
+        "issued": "Emitido 16 de julio, 2021",
+        "institution": "freeCodeCamp"
+      },
+      {
+        "degree": "CS50's Introduction to Computer Science",
+        "issued": "Emitido Nov 2019",
+        "institution": "CS50x through CS50x.ni"
+      }
+    ],
+    "seeCertificate": "Ver certificado"
   }
 }

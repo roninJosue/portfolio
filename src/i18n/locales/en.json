@@ -34,9 +34,28 @@
     "degrees": "Degrees Received",
     "degreesList": [
       {
-        "degree": "System e",
+        "degree": "Information Systems Engineer",
         "institution": "Universidad Nacional Autónoma de Nicaragua (UNAN - León)"
       }
-    ]
+    ],
+    "certificates": "Certificates",
+    "certificatesList": [
+      {
+        "degree": "Responsive Web Design",
+        "issued": "Issued February 29, 2020",
+        "institution": "freeCodeCamp"
+      },
+      {
+        "degree": "JavaScript Algorithms and Data Structures",
+        "issued": "Issued July 16, 2021",
+        "institution": "freeCodeCamp"
+      },
+      {
+        "degree": "CS50's Introduction to Computer Science",
+        "issued": "Issued Nov 2019",
+        "institution": "CS50x through CS50x.ni"
+      }
+    ],
+    "seeCertificate": "See certificate"
   }
 }

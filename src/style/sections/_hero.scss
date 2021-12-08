@@ -1,3 +1,8 @@
+@mixin height-auto{
+  min-height: auto;
+  height: auto;
+}
+
 .hero {
   min-height: 100vh;
   height: 100vh;
@@ -5,15 +10,31 @@
   align-items: center;
   border-bottom: 0;
 
+  &__pading {
+    padding: 0 5.6rem;
+
+    @include respond(phone){
+      padding: 0;
+    }
+  }
+
+  &__2{
+    min-height: 70vh;
+    height: 70vh;
+  }
+
   @include respond(phone){
-    min-height: auto;
-    height: auto;
+    @include height-auto;
+
+    &__2{
+      @include height-auto;
+    }
   }
 
   background: var(--bg-color);
   font-weight: 400;
   color: var(--color-text);
-  padding: 0rem 5.6rem;
+  padding: 0 5.6rem;
   margin-bottom: 0;
   top: 0;
   left: 0;
