@@ -1,7 +1,7 @@
 import React from "react";
 import { FaGithub } from "react-icons/all";
 
-const AllProjectsButton = () => (
+const AllProjectsButton = ({text}) => (
   <a
     href="https://github.com/roninJosue"
     target="_blank"
@@ -11,7 +11,7 @@ const AllProjectsButton = () => (
     <FaGithub
       size="3rem"
     />
-    All projects
+    {text}
   </a>
 );
 

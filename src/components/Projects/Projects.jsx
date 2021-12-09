@@ -51,7 +51,9 @@ const Projects = ({ t }) => {
           </Row>
           <Row className='justify-content-center'>
             <Col md={12}>
-              <AllProjectsButton />
+              <AllProjectsButton
+                text={t('projects.more')}
+              />
             </Col>
           </Row>
         </div>
