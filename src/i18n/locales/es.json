@@ -14,7 +14,9 @@
   "projects": {
     "title": "Proyectos",
     "demo": "Demo",
-    "code": "Código"
+    "code": "Código",
+    "text": "Algunos de mis proyectos",
+    "paragraph": "Algunos de los proyectos personales que he construido"
   },
   "contact": {
     "title": "Contácto",

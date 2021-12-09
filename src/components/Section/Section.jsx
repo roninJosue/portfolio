@@ -29,7 +29,7 @@ const Section = (
               </Fade>
             </Col>
             <Col lg={6} md={12} sm={12}>
-              <Fade right={true} duration={1000} distance="30px">
+              <Fade right duration={1000} distance="30px">
                 {right}
               </Fade>
             </Col>

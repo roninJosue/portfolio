@@ -1,5 +1,5 @@
 import React from "react";
-import {FaExternalLinkAlt} from "react-icons/all";
+import { FaExternalLinkAlt } from "react-icons/all";
 import { translate } from "react-i18next";
 import { Col, Row } from "react-bootstrap";
 import Fade from "react-reveal/Fade";
@@ -43,14 +43,12 @@ const Education = ({ t }) => {
   return (
     <Section
       cls="hero hero__2"
-      left={
-        (
-          <SvgImage
-            alt="GraduationCap"
-            svg={GraduationCap}
-          />
-        )
-      }
+      left={(
+        <SvgImage
+          alt="GraduationCap"
+          svg={GraduationCap}
+        />
+      )}
       right={(
         <SectionContent
           name={t("education.title")}
@@ -76,6 +74,7 @@ const Education = ({ t }) => {
 };
 
 const Degrees = ({ t, list, head }) => {
+  let delay = 0;
   return (
     <>
       <Row className="mt-5 flex-wrap justify-content-center">
@@ -94,25 +93,28 @@ const Degrees = ({ t, list, head }) => {
         justify-content-md-between
         "
       >
-        {list.map(degree => (
-          <Fade
-            left
-            duration={1000}
-            delay={500}
-          >
-            <Col md={4}>
-              <DegreesItem
-                degree={t(degree.degree)}
-                institution={t(degree.institution)}
-                from={degree.from}
-                to={degree.to}
-                issued={t(degree.issued)}
-                certificateLink={degree.certificateLink}
-                see={t('education.seeCertificate')}
-              />
-            </Col>
-          </Fade>
-        ))}
+        {list.map(degree => {
+          delay += 500;
+          return (
+            <Fade
+              left
+              duration={1000}
+              delay={delay}
+            >
+              <Col md={4}>
+                <DegreesItem
+                  degree={t(degree.degree)}
+                  institution={t(degree.institution)}
+                  from={degree.from}
+                  to={degree.to}
+                  issued={t(degree.issued)}
+                  certificateLink={degree.certificateLink}
+                  see={t("education.seeCertificate")}
+                />
+              </Col>
+            </Fade>
+          );
+        })}
       </Row>
     </>
   );
@@ -140,8 +142,8 @@ const DegreesItem = (
         <span className="grade-period">{issued}</span>
       )}
       {certificateLink && (
-        <a className='text-left' rel="stylesheet" target="_blank" href={certificateLink}>
-          <span className='mr-4'>{see}</span>
+        <a className="text-left" rel="stylesheet" target="_blank" href={certificateLink}>
+          <span className="mr-4">{see}</span>
           {<FaExternalLinkAlt />}
         </a>
       )}

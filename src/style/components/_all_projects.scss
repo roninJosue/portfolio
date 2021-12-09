@@ -1,0 +1,14 @@
+.all_projects {
+  width: 200px;
+
+  svg {
+    color: $primary-color;
+    margin-right: 2rem;
+  }
+
+  &:hover {
+    svg {
+      color: #fff;
+    }
+  }
+}

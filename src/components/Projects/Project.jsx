@@ -14,7 +14,7 @@ const Project = (props) => {
   } = props;
 
   return (
-    <Col md={6} lg={4} sm={12} className="mb-4">
+    <Col md={6} lg={3} sm={12} className="mb-4">
       <Fade
         left={isDesktop}
         bottom={isMobile}

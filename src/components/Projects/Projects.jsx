@@ -1,48 +1,63 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { translate } from "react-i18next";
-import { Container, Row } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import PortfolioContext from "../../context/context";
-import Title from "../Title/Title";
 import Project from "./Project";
+import Section from "../Section/Section";
+import ProjectSvg from "../../images/projects.svg";
+import SvgImage from "../SvgImage/SvgImage";
+import SectionContent from "../SectionContent/SectionContent";
+import AllProjectsButton from "../AllProjectsButton/AllProjectsButton";
 
-const Projects = ({t}) => {
+const Projects = ({ t }) => {
   const { repos } = useContext(PortfolioContext);
-  const [isDesktop, setIsDesktop] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    if (window.innerWidth > 769) {
-      setIsDesktop(true);
-      setIsMobile(false);
-    } else {
-      setIsMobile(true);
-      setIsDesktop(false);
-    }
-  }, []);
 
   return (
-    <section id="projects">
-      <Container>
+    <>
+      <Section
+        left={
+          (
+            <SvgImage
+              alt="GraduationCap"
+              svg={ProjectSvg}
+            />
+          )
+        }
+        right={(
+          <SectionContent
+            name={t("projects.title")}
+            text={[
+              t("projects.paragraph")
+            ]}
+          />
+        )}
+        sectionId="projects"
+      >
+
         <div className="project-wrapper">
-          <Title title={t('projects.title')} />
-          <Row>
+          <Row className="mt-5">
             {repos.length > 0 && repos.map((project) => {
               return (
                 <Project
                   key={project.id}
-                  isDesktop={isDesktop} 
-                  isMobile={isMobile}
+                  isDesktop={false}
+                  isMobile={false}
                   project={project}
-                  demo={t('projects.demo')}
-                  code={t('projects.code')}
+                  demo={t("projects.demo")}
+                  code={t("projects.code")}
                 />
               );
             })}
           </Row>
+          <Row className='justify-content-center'>
+            <Col md={12}>
+              <AllProjectsButton />
+            </Col>
+          </Row>
         </div>
-      </Container>
-    </section>
+      </Section>
+    </>
   );
 };
 
-export default translate('common')(Projects);
+export default translate("common")(Projects);

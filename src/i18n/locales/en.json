@@ -14,7 +14,9 @@
   "projects": {
     "title": "Projects",
     "demo": "See Live",
-    "code": "Source Code"
+    "code": "Source Code",
+    "text": "Some of my projects",
+    "paragraph": "Some of the personal projects I have built"
   },
   "contact": {
     "title": "Contact",
