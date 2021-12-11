@@ -17,7 +17,7 @@ export const heroData = {
 
 // ABOUT DATA
 export const aboutData = {
-  img: "profile.jpg",
+  img: "me2.png",
   title: "Acerca de mí",
   paragraphOne:
     "Hola, soy Reynaldo Cano, Ing. En Sistemas, me encanta crear aplicaciones web, en base a requerimientos que satisfagan las necesidades del problema. He trabajado tanto en el desarrollo de interfaces de usuario, como en el manejo y guardado de los datos.",

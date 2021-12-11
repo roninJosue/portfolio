@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { FaGithub } from "react-icons/all";
 import { translate } from "react-i18next";
 import { Row, Col } from "react-bootstrap";
 import PortfolioContext from "../../context/context";
@@ -7,7 +8,7 @@ import Section from "../Section/Section";
 import ProjectSvg from "../../images/projects.svg";
 import SvgImage from "../SvgImage/SvgImage";
 import SectionContent from "../SectionContent/SectionContent";
-import AllProjectsButton from "../AllProjectsButton/AllProjectsButton";
+import LinkButton from "../LinkButton/LinkButton";
 
 const Projects = ({ t }) => {
   const { repos } = useContext(PortfolioContext);
@@ -49,10 +50,12 @@ const Projects = ({ t }) => {
               );
             })}
           </Row>
-          <Row className='justify-content-center'>
+          <Row className="justify-content-center">
             <Col md={12}>
-              <AllProjectsButton
-                text={t('projects.more')}
+              <LinkButton
+                text={t("projects.more")}
+                link='https://github.com/roninJosue'
+                icon={<FaGithub size="3rem" />}
               />
             </Col>
           </Row>

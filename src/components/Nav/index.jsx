@@ -9,6 +9,7 @@ import useNav from "./hooks/useNav";
 const arrLinks = [
   { link: '/', text: 'menu.home' },
   { link: '/education', text: 'menu.education' },
+  { link: '/experience', text: 'menu.experience' },
   { link: '/projects', text: 'menu.projects' },
   { link: '/contact', text: 'menu.contact' },
 ];

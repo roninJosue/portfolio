@@ -8,8 +8,7 @@
   "about": {
     "title": "About me",
     "paragraphOne": "Hi, I'm Systems Engineer, I love creating web applications, based on requirements that meet the needs of the problem. I have worked both in the development of user interfaces, as in the handling and saving of the data.",
-    "paragraphTwo": "Responsible, eager to acquire new knowledge for my personal strengthening.",
-    "resumeLabel": "RESUME"
+    "paragraphTwo": "Responsible, eager to acquire new knowledge for my personal strengthening."
   },
   "projects": {
     "title": "Projects",
@@ -20,16 +19,19 @@
     "more": "More projects"
   },
   "contact": {
-    "title": "Contact",
+    "title": "Contact Me",
     "cta": "Would you like to work with me? Awesome!",
-    "btn": "Let's Talk"
+    "btn": "Let's Talk",
+    "paragraphOne": "You can contact me on any of my social networks. If you have a project in mind, you can send me an email :D ",
+    "resumeLabel": "RESUME"
   },
   "menu": {
     "home": "Home",
     "about": "About",
     "education": "Education",
+    "experience": "Experience",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact Me"
   },
   "education": {
     "title": "Education",

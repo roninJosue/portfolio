@@ -1,35 +1,45 @@
-import React, { useContext } from 'react';
+import React, { useContext }  from 'react';
+import {BsBoxArrowInUpRight} from "react-icons/all";
 import { translate } from "react-i18next";
-import Fade from 'react-reveal/Fade';
-import { Container } from 'react-bootstrap';
+import Section from "../Section/Section";
+import SectionContent from "../SectionContent/SectionContent";
+import SocialNetwork from "../SocialNetwork";
+import LinkButton from "../LinkButton/LinkButton";
 import PortfolioContext from '../../context/context';
-import Title from '../Title/Title';
+import SvgImage from "../SvgImage/SvgImage";
+import ProfileSvg from '../../images/profile.svg'
 
 const Contact = ({t}) => {
-  const { contact } = useContext(PortfolioContext);
-  const { email } = contact;
+
+  const { about } = useContext(PortfolioContext);
+  const { img, resume } = about;
 
   return (
-    <section id="contact">
-      <Container>
-        <Title title={t('contact.title')} />
-        <Fade bottom duration={1000} delay={800} distance="30px">
-          <div className="contact-wrapper">
-            <p className="contact-wrapper__text">
-              {t('contact.cta')}
-            </p>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cta-btn cta-btn--resume"
-              href={email ? `mailto:${email}` : 'https://github.com/cobidev/react-simplefolio'}
-            >
-              {t('contact.btn')}
-            </a>
-          </div>
-        </Fade>
-      </Container>
-    </section>
+    <Section
+      left={(
+        <SectionContent
+          name={t('contact.title')}
+          text={[
+            t('contact.paragraphOne'),
+          ]}
+        >
+          <SocialNetwork />
+          <LinkButton
+            text={t('contact.resumeLabel')}
+            link={resume}
+            icon={<BsBoxArrowInUpRight size={'2.5rem'} />}
+          />
+        </SectionContent>
+      )}
+      right={(
+        (
+          <SvgImage
+            alt="Profile"
+            svg={ProfileSvg}
+          />
+        )
+      )}
+     />
   );
 };
 
