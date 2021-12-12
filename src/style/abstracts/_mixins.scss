@@ -51,3 +51,20 @@ ORDER: Base + Typography > Generar Layout + Grid > Page Layout > Components
   border-top: 0;
   border-bottom: 0;
 }
+
+@mixin background {
+  background-color: var(--bg-project-color);
+  border-radius: 5px;
+  margin: 1rem;
+  transition: all .15s ease;
+  -webkit-box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07)!important;
+  box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07)!important;
+  color: var(--color-text);
+  cursor: pointer;
+  padding: 2rem 5rem;
+
+  &:hover{
+    transform: translateY(-10px);
+    box-shadow: none;
+  }
+}

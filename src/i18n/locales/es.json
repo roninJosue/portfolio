@@ -62,5 +62,9 @@
       }
     ],
     "seeCertificate": "Ver certificado"
+  },
+  "experience": {
+    "title": "Experiencia laboral",
+    "paragraphOne": "En el transcurso de mi vida laboral, he podido desarrollar aplicaciones empleando varias tecnologías, tanto en el front-end como en el back-end. Partiendo de requerimientos específicos para afrontar un problema, creaba primeramente prototipos de las aplicaciones, para luego proceder con el desarrollo. Las aplicaciones creadas han estado centradas en el ámbito de educación superior "
   }
 }

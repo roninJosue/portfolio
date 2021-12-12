@@ -142,9 +142,9 @@ const DegreesItem = (
         <span className="grade-period">{issued}</span>
       )}
       {certificateLink && (
-        <a className="text-left" rel="stylesheet" target="_blank" href={certificateLink}>
+        <a className="text-left" rel="stylesheet noreferrer" target="_blank" href={certificateLink}>
           <span className="mr-4">{see}</span>
-          {<FaExternalLinkAlt />}
+          <FaExternalLinkAlt />
         </a>
       )}
     </div>

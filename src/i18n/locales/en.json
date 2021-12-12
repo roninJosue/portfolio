@@ -62,5 +62,9 @@
       }
     ],
     "seeCertificate": "See certificate"
+  },
+  "experience": {
+    "title": "Work experience",
+    "paragraphOne": "Over the course of my working life, I have been able to develop applications using various technologies, both front-end and back-end. Starting from specific requirements to face a problem, it first created prototypes of the applications, and then proceeded with development. The applications created have been focused on the field of higher education"
   }
 }

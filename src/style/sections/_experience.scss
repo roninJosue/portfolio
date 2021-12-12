@@ -1,0 +1,33 @@
+.experience {
+  &-wrap {
+    width: 100%;
+    background-color: chartreuse;
+
+    @include background();
+  }
+
+  &-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-position{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  &-period{
+    font-size: 2rem;
+  }
+
+  &-company {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  &-description {
+    text-align: justify;
+  }
+}

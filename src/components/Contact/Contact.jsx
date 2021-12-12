@@ -12,7 +12,7 @@ import ProfileSvg from '../../images/profile.svg'
 const Contact = ({t}) => {
 
   const { about } = useContext(PortfolioContext);
-  const { img, resume } = about;
+  const { resume } = about;
 
   return (
     <Section
