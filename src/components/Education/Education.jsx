@@ -8,6 +8,7 @@ import GraduationCap from "../../images/graduation.svg";
 import SvgImage from "../SvgImage/SvgImage";
 import SectionContent from "../SectionContent/SectionContent";
 import Title from "../Title/Title";
+import { nanoid } from "nanoid";
 
 const degrees = [
   {
@@ -100,6 +101,7 @@ const Degrees = ({ t, list, head }) => {
               left
               duration={1000}
               delay={delay}
+              key={nanoid()}
             >
               <Col md={4}>
                 <DegreesItem

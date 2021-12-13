@@ -65,6 +65,21 @@
   },
   "experience": {
     "title": "Work experience",
-    "paragraphOne": "Over the course of my working life, I have been able to develop applications using various technologies, both front-end and back-end. Starting from specific requirements to face a problem, it first created prototypes of the applications, and then proceeded with development. The applications created have been focused on the field of higher education"
+    "title_2": "Latest works",
+    "paragraphOne": "Over the course of my working life, I have been able to develop applications using various technologies, both front-end and back-end. Starting from specific requirements to face a problem, it first created prototypes of the applications, and then proceeded with development. The applications created have been focused on the field of higher education",
+    "experienceList": [
+      {
+        "position": "Programmer analyst",
+        "period": "April 2017 - September 2021",
+        "company": "Universidad Nacional Autónoma de Nicaragua - León (UNAN-León)",
+        "description": "System requirements analysis, prototyping, web application development. Creation of a tool used by teachers to enter student grades online. Web application that allows new students to register at the university to be admitted to a specific career."
+      },
+      {
+        "position": "Web developer",
+        "period": "2015 - 2016",
+        "company": "OEA / PIFJ",
+        "description": "Design and development of online education platform."
+      }
+    ]
   }
 }

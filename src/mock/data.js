@@ -24,7 +24,7 @@ export const aboutData = {
   paragraphTwo:
     " Responsable con muchas ganas de adquirir nuevos conocimientos para mi fortalecimiento personal.",
   paragraphThree: "",
-  resume: "https://drive.google.com/file/d/1TyVLncBROnioGJHbITgFyLhcEX2F2pKP/view?usp=sharing", // if no resume, the button will not show up
+  resume: "https://drive.google.com/file/d/1TIkc_BaRcezV-Eovd5Gz1DCSPVME0UOa/view?usp=sharing", // if no resume, the button will not show up
   resumeLabel: "CURRÍCULO"
 };
 

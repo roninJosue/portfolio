@@ -1,8 +1,5 @@
 .experience {
   &-wrap {
-    width: 100%;
-    background-color: chartreuse;
-
     @include background();
   }
 
@@ -10,21 +7,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1rem;
   }
 
   &-position{
     font-size: 2rem;
     font-weight: bold;
+    margin: 0;
   }
 
   &-period{
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   &-company {
     font-size: 1.6rem;
     font-weight: 700;
     text-align: left;
+    margin-bottom: 1rem;
   }
 
   &-description {

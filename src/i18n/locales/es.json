@@ -22,7 +22,7 @@
     "title": "Contáctame",
     "cta": "¿Te gustaría trabajar conmigo?",
     "btn": "Envíame un correo",
-    "paragraphOne": "Puedes contactarme en alguna de mis redes sociales. Si tienes algún proyecto en mente, puedes enviárme un correo :D",
+    "paragraphOne": "Puedes contactarme en alguna de mis redes sociales. Si tienes algún proyecto en mente, puedes enviarme un correo :D",
     "resumeLabel": "CURRÍCULO"
   },
   "menu": {
@@ -56,7 +56,7 @@
         "institution": "freeCodeCamp"
       },
       {
-        "degree": "CS50's Introduction to Computer Science",
+        "degree": "CS50 Introducción a la Ciencia de la Computación",
         "issued": "Emitido Nov 2019",
         "institution": "CS50x through CS50x.ni"
       }
@@ -65,6 +65,21 @@
   },
   "experience": {
     "title": "Experiencia laboral",
-    "paragraphOne": "En el transcurso de mi vida laboral, he podido desarrollar aplicaciones empleando varias tecnologías, tanto en el front-end como en el back-end. Partiendo de requerimientos específicos para afrontar un problema, creaba primeramente prototipos de las aplicaciones, para luego proceder con el desarrollo. Las aplicaciones creadas han estado centradas en el ámbito de educación superior "
+    "title_2": "Últimos trabajos",
+    "paragraphOne": "En el transcurso de mi vida laboral, he podido desarrollar aplicaciones empleando varias tecnologías, tanto en el front-end como en el back-end. Partiendo de requerimientos específicos para afrontar un problema, creaba primeramente prototipos de las aplicaciones, para luego proceder con el desarrollo. Las aplicaciones creadas han estado centradas en el ámbito de educación superior ",
+    "experienceList": [
+      {
+        "position": "Analista programador",
+        "period": "Abril 2017 - Septiembre 2021",
+        "company": "Universidad Nacional Autónoma de Nicaragua - León (UNAN-León)",
+        "description": "Análisis de requerimientos del sistema, creación de prototipos, desarrollo de aplicaciones web. Creación de herramienta empleada por docentes para ingresar notas de los estudiantes en línea. Aplicación web que permite a nuevos estudiantes registrarse en la universidad para ser admitidos en alguna carrera en especifica."
+      },
+      {
+        "position": "Desarrollador Web",
+        "period": "2015 - 2016",
+        "company": "OEA / PIFJ",
+        "description": "Diseño y desarrollo de plataforma de educación en línea."
+      }
+    ]
   }
 }
