@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {FaSun, FaMoon} from 'react-icons/fa';
 
-const windowDefined =  window !== undefined
+const windowDefined =  typeof window !== 'undefined'
 
 const getThemeFromLocalStorage = windowDefined ? localStorage.getItem('theme') : 'light'
 
