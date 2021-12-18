@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import {FaSun, FaMoon} from 'react-icons/fa';
 
-const getThemeFromLocalStorage = localStorage.getItem('theme')
+const windowDefined =  window !== undefined
+
+const getThemeFromLocalStorage = windowDefined ? localStorage.getItem('theme') : 'light'
 
 const Theme = () => {
   const [theme, setTheme] = useState(getThemeFromLocalStorage || 'light')
