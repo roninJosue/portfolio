@@ -10,11 +10,15 @@ const LanguageSwitch = () => {
 
   return (
     <>
-      <div role='button' className='language-toggle' onClick={handleLanguage}>
+      <button
+        className='language-toggle'
+        onClick={handleLanguage}
+        aria-label='change language'
+      >
         <span className="labels label-en" data-lang="EN" />
         <div className={`language-switch ${i18next.language === 'es' ? '' : 'on'} id='language-switch`} />
         <span className="labels label-es" data-lang="ES" />
-      </div>
+      </button>
     </>
   );
 };

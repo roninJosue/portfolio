@@ -18,12 +18,16 @@ const Theme = () => {
   };
 
   return (
-    <div role="button" className="icon-theme" onClick={handleChange}>
+    <button
+      className="icon-theme"
+      onClick={handleChange}
+      aria-label='Switch Theme'
+    >
       {
         theme === "light" ? <FaMoon size={"3em"} />
           : <FaSun size={"3em"} />
       }
-    </div>
+    </button>
   );
 };
 

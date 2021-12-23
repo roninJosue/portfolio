@@ -12,6 +12,9 @@
   .icon-theme {
     cursor: pointer;
     width: 35px;
+    color: var(--color-text);
+    background-color: transparent;
+    border: none;
   }
 
   i {
@@ -22,5 +25,4 @@
 
 .nav-bar--hidden {
   top: -70px;
-  background-color: rebeccapurple;
 }
