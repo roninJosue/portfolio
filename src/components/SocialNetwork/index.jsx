@@ -6,26 +6,30 @@ const icons = [
   {
     icon: FaGithub,
     href: "https://github.com/roninJosue",
-    css: "github"
+    css: "github",
+    ariaLabel: 'Github'
   },
   {
     icon: FaLinkedin,
     href: "https://www.linkedin.com/in/reynaldo-josu%C3%A9-cano-b%C3%A1rcenas-430bb8a6/",
-    css: "linkedin"
+    css: "linkedin",
+    ariaLabel: 'LinkedIn'
   },
   {
     icon: SiGmail,
     href: "mailto:cano.barcenas.reynaldo@gmail.com",
-    css: "gmail"
+    css: "gmail",
+    ariaLabel: 'Gmail'
   },
   {
     icon: FaInstagram,
     href: "https://www.instagram.com/roninjosue/",
-    css: "instagram"
+    css: "instagram",
+    ariaLabel: 'Instagram'
   }
 ];
 
-const SocialIcon = ({ icon: { href, icon: Icon, css = "" }, footer }) => {
+const SocialIcon = ({ icon: { href, icon: Icon, ariaLabel, css = "" }, footer }) => {
   const icon2 =  footer ? '__2' : ''
   return (
     <a
@@ -33,6 +37,7 @@ const SocialIcon = ({ icon: { href, icon: Icon, css = "" }, footer }) => {
       className="social-networks-icon"
       href={href}
       target="_blank"
+      aria-label={ariaLabel}
     >
       <Icon
         className={`social-networks-${css}${icon2}`}

@@ -19,28 +19,7 @@ const Nav = ({ t }) => {
   return (
     <div>
       <nav className='nav'>
-        <ul className='nav-list'>
-          {arrLinks.map((link) => {
-            return (
-              <NavItem key={nanoid()}>
-                <NavLink
-                  link={link.link}
-                  text={t(link.text)}
-                />
-              </NavItem>
-            );
-          })}
-          <NavItem>
-            <Theme
-              theme={'dark'}
-              handleChange={() => {
-              }}
-            />
-          </NavItem>
-          <NavItem>
-            <LanguageSwitch />
-          </NavItem>
-        </ul>
+        <NavBody t={t} />
       </nav>
       <NavButton
         onClick={handleClick}
@@ -76,6 +55,7 @@ const NavButton = ({onClick, buttonPressed}) => {
       type='button'
       onClick={onClick}
       className='nav-button'
+      aria-label='nav-button'
     >
       <div className='nav-button-box'>
         <div className={`nav-button-inner ${activeSideNav}`} />
@@ -98,11 +78,7 @@ const NavBody = ({t, navType='nav-list'}) => {
         );
       })}
       <NavItem>
-        <Theme
-          theme={'dark'}
-          handleChange={() => {
-          }}
-        />
+        <Theme />
       </NavItem>
       <NavItem>
         <LanguageSwitch />
