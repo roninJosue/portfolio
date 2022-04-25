@@ -11,7 +11,7 @@ const icons = [
   },
   {
     icon: FaLinkedin,
-    href: "https://www.linkedin.com/in/reynaldo-josu%C3%A9-cano-b%C3%A1rcenas-430bb8a6/",
+    href: "https://www.linkedin.com/in/reynaldocano88/",
     css: "linkedin",
     ariaLabel: 'LinkedIn'
   },
