@@ -2,11 +2,6 @@
 
 ## A clean, beautiful and responsive portfolio template for Developers
 
-
-
-
-
-
 ## Features
 
 ⚡️ Modern UI Design + Reveal Animations\
